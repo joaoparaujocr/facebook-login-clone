@@ -1,0 +1,479 @@
+/* page formatting */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+html, body{
+    height: 100%;
+    background-color: #f0f2f5;
+}
+
+.clear{clear: both;}
+
+
+.main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 600px;
+    padding: 10px;
+    font-size: 70px;
+    text-align: left;
+    color: #1877f2;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+}
+
+.logo h3{
+    font-size: 28px;
+    color: black;
+    font-weight: 600;
+    text-align: left;
+}
+
+.btns{
+    padding: 30px 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 300px; 
+    text-align: center;
+    -webkit-box-shadow: inset 0px 0px 8px 4px #757575; 
+    box-shadow: inset 0px 0px 8px 4px #757575;
+}
+
+#btn-login{ 
+    display: inline-block;
+    max-width: 200px;
+    width: 100%;
+    margin: 0 2%;
+    height: 50px;
+    font-size: 23px;
+    color: white;
+    background-color: #1877f2;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#btn-cadastrar{
+    display: inline-block; 
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    font-size: 23px;
+    color: white;
+    background-color: #42b72a;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+#bgFormLogin{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0 2%;
+    background-color: rgba(184, 184, 184, 0.452);
+    display: none;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    max-width: 450px;
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    padding: 90px 2% 0 2%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 20px 2px #636363; 
+    box-shadow: 0px 0px 20px 2px #636363;
+}
+
+.close-btn{
+    background-image: url(../images/close\ \(2\).png);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.form input{
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-size: 17px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form input:focus{
+    border: #1877f2 1px solid;
+    -webkit-box-shadow: 0px 0px 5px 1px #1877F2; 
+    box-shadow: 0px 0px 5px 1px #1877F2;
+}
+
+.form input[type=submit]{
+    max-width: 160px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #1877f2;
+    border: 0;
+    font-size: 23px;
+    color: white;
+}
+
+#bgFormRegister{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    padding: 0 2%;
+}
+
+#formRegister{
+    border-radius: 20px;
+    padding-top: 10px;
+    background-color: white;
+    max-width: 450px;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 0px 20px 2px #636363; 
+    box-shadow: 0px 0px 20px 2px #636363;
+}
+
+#formRegister header{
+    padding: 20px 10px;
+}
+
+#formRegister header h4{
+    font-weight: 400;
+    color: #ccc;
+}
+
+#formRegister hr{
+    border: 1px solid #ccc;
+}
+
+#formRegister form{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.inputRegister{
+    width: 100%;
+    padding: 0 10px;
+    height: 45px;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.inputInvalido{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 800;
+    content: '\f06a';
+    font-family: "Font Awesome 5 Free";
+    color: red;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.w50{
+    width: 50%;
+}
+
+.inputRegister input[type=text],
+input[type=password],
+input[type=email]{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    border: #ccc solid 1px;
+    padding-left: 12px;
+    border-radius: 6px;
+    outline: 0;
+    background-color: rgb(248, 247, 247);
+}
+
+.dica{
+    width: 100%;
+    height: 14px;
+    font-size: 12px;
+    color: #606770;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.dica p{
+    display: inline-block;
+}
+
+.dica .dica-icon{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #606770;
+    text-align: center;
+    line-height: 14px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 600;
+}
+
+.date{
+    padding: 0 10px;
+    width: calc(100% / 3);
+    float: left;
+    position: relative;
+    margin: 5px 0 10px;
+    height: 40px;
+}
+
+.date select{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 15px;
+    color: rgb(126, 126, 126);
+    appearance: none;
+    cursor: pointer;
+}
+
+.date::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    width: 40px;
+    height: 40px;
+    background-color: #a0c4f3;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.checkboxInput{
+    margin: 5px 0 10px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.boxCheckBox{
+    border: 1px solid #ccc;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 8px;
+    color: rgb(148, 148, 148);
+    position: relative;
+}
+
+.boxCheckBox label{
+    padding: 0 30px 0 15px;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.boxCheckBox input[type=radio]{
+    width: 15px;
+    height: 15px;
+    margin-left: 6px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+#formRegister form input[type=submit]{
+    width: 170px;
+    text-align: center;
+    line-height: 38px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    height: 38px;
+    background-color: #00a400;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.iconInv{
+    display: none;
+}
+
+.iconInv::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f06a";
+    width: 45px;
+    height: 45px;
+    color: #b94a48;
+    text-align: center;
+    font-size: 16px;
+    line-height: 45px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1020px) {
+    .main{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        flex-direction: column;
+    }
+    .logo{
+        width: 50%;
+    }
+    .btns{
+        display: inline-block;
+        padding: 30px 10px;
+        border-radius: 8px;
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translateY(0);
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        -webkit-box-shadow: inset 0px 0px 8px 4px #757575; 
+        box-shadow: inset 0px 0px 8px 4px #757575;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .logo{
+        font-size: 40px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        font-weight: 700;
+    }
+
+    .logo h3{
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .checkboxInput{
+        max-width: 200px;
+        width: 100%;
+        margin: 5px 0 10px 0;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .boxCheckBox{
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .boxCheckBox label{
+        padding: 0 10px 0 15px;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .boxCheckBox input[type=radio]{
+        width: 15px;
+        height: 15px;
+        margin-left: 6px;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+    }
+
+    #formRegister form input[type=submit]{
+        width: 170px;
+        text-align: center;
+        line-height: 38px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        height: 38px;
+        background-color: #00a400;
+        border: 0;
+        outline: 0;
+        border-radius: 8px;
+        margin-top: 1%;
+        cursor: pointer;
+    }
+}

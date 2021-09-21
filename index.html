@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/fec512a3cb.js" crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <section class="main">
+            <div class="logo">
+                <p>facebook</p>
+                <h3>O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</h3>
+            </div><!--logo-->
+
+
+            <div class="btns">
+                <div id="btn-login">
+                    Entrar
+                </div><!--btn-login-->
+
+                <div id="btn-cadastrar">
+                    Criar nova conta
+                </div><!--btn-cadastrar-->
+            </div><!--btns-->
+        </section>
+
+        <div id="bgFormLogin">
+            <div class="form" id="formLogin">
+                <form action="">
+                    <div class="close-btn"></div>
+                    <input type="email" name="email" placeholder="E-mail ou telefone">
+                    <input type="password" name="name" placeholder="Senha">
+                    <input type="submit" value="Entrar">
+                </form>
+            </div><!--formLogin-->
+        </div><!--bgFormLogin-->
+
+        <div id="bgFormRegister">
+            <div id="formRegister">
+                <div class="close-btn"></div>
+                <header>
+                    <h1>Cadastre-se</h1>
+                    <h4>É rápido e fácil.</h4>
+                </header>
+
+                <hr>
+
+                <form id="formRg" action="">
+                    <div class="inputRegister w50">
+                        <div class="box-iconInv">
+                            <input type="text" name="firstName" placeholder="Nome">
+                            <div class="iconInv"></div>
+                        </div>
+                    </div>
+
+                    <div class="inputRegister w50">
+                        <div class="box-iconInv">
+                            <input type="text" name="lastName" placeholder="Sobrenome">
+                            <div class="iconInv"></div>
+                        </div>
+                    </div>
+
+                    <div class="inputRegister w100">
+                        <div class="box-iconInv">
+                            <input type="email" id="email_register" name="email" placeholder="Email ou telefone">
+                            <div class="iconInv"></div>
+                        </div>
+                    </div>
+
+                    <div class="inputRegister w100">
+                        <div class="box-iconInv">
+                            <input type="password" name="password" placeholder="Senha">
+                            <div class="iconInv"></div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="dica">
+                        <p>Data de nascimento</p>
+                        <div class="dica-icon">?</div>
+                    </div>
+
+                    <div class="InputRegister date">
+                        <select name="">
+                            <option value="day" disabled selected>Dia</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="InputRegister date">
+                        <select name="">
+                            <option value="moth" disabled selected>Mês</option>
+                        </select>
+                    </div>
+
+                    <div class="InputRegister date">
+                        <select name="year">
+                            <option value="year" disabled selected>Ano</option>
+                        </select>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="dica">
+                        <p>Gênero</p>
+                        <div class="dica-icon">?</div>
+                    </div>
+
+                    <div class="checkboxInput">
+                        <div class="boxCheckBox" for="masculino">
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" id="masculino" name="genero">
+                        </div>
+                        <div class="boxCheckBox" for="Feminino">
+                            <label for="Feminino">Feminino</label>
+                            <input type="radio" id="Feminino" name="genero">
+                        </div>
+                        <div class="boxCheckBox" for="Personalizado">
+                            <label for="Personalizado">Personalizado</label>
+                            <input type="radio" id="Personalizado" name="genero">
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Cadastre-se">
+                </form>
+            </div>
+
+        </div><!--bgFormRegister-->
+
+
+        <script src="js/jquery.js" defer></script>
+        <script src="js/main.js" defer></script>
+    </body>
+</html>
