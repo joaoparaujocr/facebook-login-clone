@@ -54,13 +54,13 @@ $(document).ready(function(){
     }
 
     function focusInput(){
-        $('input[name=firstName], input[name=lastName], input[name=email], input[name=password]').focus(function(){
+        $('input[name=firstName], input[name=lastName], input[name=rgemail], input[name=password]').focus(function(){
             resetInput($(this))
         })
     }
 
     function blurInput(){
-        $('input[name=firstName], input[name=lastName], input[name=email], input[name=password]').blur(function () { 
+        $('input[name=firstName], input[name=lastName], input[name=rgemail], input[name=password]').blur(function () { 
             if($(this).val() == '' || $(this).val() == '*'){
                 inputInvalido($(this));
             }
